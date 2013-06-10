@@ -63,12 +63,12 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/gps.conf:system/etc/gps.conf
 
 # Packages
+# Removed Camera & Torch apps to free-up space as they're useless for Ubuntu Touch
 PRODUCT_PACKAGES := \
     audio.a2dp.default \
     audio.primary.smdk4x12 \
     audio.usb.default \
     camera.exynos4 \
-    Camera \
     com.android.future.usb.accessory \
     gralloc.exynos4 \
     hwcomposer.exynos4 \
@@ -77,8 +77,7 @@ PRODUCT_PACKAGES := \
     libsync \
     lights.exynos4 \
     macloader \
-    tinymix \
-    Torch    
+    tinymix 
 
 # MFC API
 PRODUCT_PACKAGES += \
@@ -108,15 +107,8 @@ PRODUCT_PACKAGES += \
     setup_fs
 
 # Live Wallpapers
+# Removed live wallpapers to free-up space as they're useless for Ubuntu Touch
 PRODUCT_PACKAGES += \
-    Galaxy4 \
-    HoloSpiralWallpaper \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    MagicSmokeWallpapers \
-    NoiseField \
-    PhaseBeam \
-    VisualizationWallpapers \
     librs_jni
 
 # These are the hardware-specific features
@@ -144,8 +136,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.xml:system/etc/permissions/android.software.sip.xml
 
 # Feature live wallpaper
-PRODUCT_COPY_FILES += \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
+# Removed to free-up space as it's useless to Ubuntu Touch
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \
